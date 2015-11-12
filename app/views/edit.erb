@@ -1,0 +1,22 @@
+<h1> You Have Edited Your Entry.  You Have Now Checked Out: </h1>
+  <%@book.author%>
+  <%@book.title%>
+
+
+<form action="/bookview/<%=@book.id%>" method= "post">
+<input type="hidden" name="_method" value="put">
+  Book Name:<br>
+  <input type="text" name="book[title]">
+  <br>
+  Author:<br>
+  <input type="text" name="book[author]">
+ <input type="submit" value="Return For Homepage!">
+</form>
+
+<form action="/bookview/<%=@book.id%>/delete" method= "post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Book">
+</form>
+
+
+
